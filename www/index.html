@@ -1,0 +1,44 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+-->
+<html>
+<head>
+  <title>Nigerian prince</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <style>
+    body {
+      background: #559911;
+      background-image: url("img/africa-hd-background_1.jpg");
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    - JavaScript and HTML must be in separate files: see our Content Security
+    - Policy documentation[1] for details and explanation.
+    -
+    - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+  -->
+  <script src="popup.js"></script>
+  <script src="challengeData.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div style="width:500px; height:100px;">
+  <section class="InternetDetectiveApp"></section>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

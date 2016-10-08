@@ -1,0 +1,13 @@
+#/js/bundle.js
+/js/bundle.js.map
+/js/bundle.min.js
+
+node_modules
+lib
+*.log
+
+src/*.js
+generated/
+
+*~
+*.sublime-workspace

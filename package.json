@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.1.5",
+    "director": "^1.2.0",
+    "react": "^0.13.3",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "exorcist": "^0.4.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "^3.7.0",
+    "tsify": "^0.15.5"
+  },
+  "scripts": {
+    "csv": "browserify src/upload_csv/internet_detective.ts -p [ tsify --jsx react] > www/js/internet_detective.js",
+    "bb": "browserify src/app.tsx -p [ tsify --jsx react] > www/js/bundle.js",
+    "test": "jest"
+  }
+}
