@@ -3,35 +3,107 @@
  This page is shown when the extension button is clicked, because the
  "browser_action" field in manifest.json contains the "default_popup" key with
  value "popup.html".
- -->
+-->
 <html>
-  <head>
-    <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <style>
+    body {
+      //font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+      //font-size: 100%;
+      background: #559911;
+      background-image: url("img/africa-hd-background_1.jpg");
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    - JavaScript and HTML must be in separate files: see our Content Security
+    - Policy documentation[1] for details and explanation.
+    -
+    - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+  -->
+  <script src="popup.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
-  </body>
+
+    <div style="widdth:300px; heidght:100%;">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-12">
+            <div class="panel panel-default">
+              <div class="panel-body">J'ai besoin de transporter mon or ver un acheteur a l'aeroport de Gwasaka. Quombien de kilometres c'est des de la grand 'Guaranty Trust Bank' de Buja?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-12">
+           <img src="img/crazyPrince.jpg"/>
+         </div>
+
+       </div>
+
+       <div class="row">
+
+         <div class="col-sm-12" style="background: #543548">
+
+          <form data-example-id="simple-input-groups">
+            <div class="input-group">
+              <input id="id_textinput" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon3" autocomplete="off">
+
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+            </div>
+
+            <div class="dropdown open">
+              <ul id="id_unordered_autocomplete_list" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
 </html>
 

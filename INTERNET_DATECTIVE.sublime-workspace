@@ -19,7 +19,34 @@
 			"file": "test/brol.html",
 			"settings":
 			{
-				"buffer_size": 345,
+				"buffer_size": 347,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "plugin/manifest.json",
+			"settings":
+			{
+				"buffer_size": 384,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "{"
+			}
+		},
+		{
+			"file": "plugin/popup.html",
+			"settings":
+			{
+				"buffer_size": 974,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/emilesonneveld/Google Drive/KissYourTeacher2/notitionEmile.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -226,9 +253,17 @@
 	},
 	"expanded_folders":
 	[
+		"/C/Users/emilesonneveld/dev/INTERNET_DETECTIVE",
+		"/C/Users/emilesonneveld/dev/INTERNET_DETECTIVE/plugin",
+		"/C/Users/emilesonneveld/dev/INTERNET_DETECTIVE/test",
+		"/C/Users/emilesonneveld/Google Drive/KissYourTeacher2"
 	],
 	"file_history":
 	[
+		"/C/Users/emilesonneveld/Google Drive/KissYourTeacher2/geo.txt",
+		"/C/Users/emilesonneveld/dev/INTERNET_DETECTIVE/plugin/popup.js",
+		"/C/Users/emilesonneveld/Dropbox (Personal)/brollekes.txt",
+		"/C/Users/emilesonneveld/Google Drive/KissYourTeacher2/informatique.txt",
 		"/C/Users/emilesonneveld/Dropbox/Public/chili/document load test.txt",
 		"/C/Users/emilesonneveld/Dropbox/Public/chili/native text input.txt",
 		"/C/Users/emilesonneveld/Dropbox/Public/chili/Aspect ratio.txt",
@@ -352,15 +387,11 @@
 		"/C/Users/emilesonneveld/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/5LB3JMLE/ATT00002.txt",
 		"/C/chili_source/branches/v4-Bugfixes07-E/CHILI Cooker/Chili Cooker/bin/Debug/cooker_config/versions.xml",
 		"/C/chili_data/Environments/Admin/Resources/Documents/emile/inl_ex_das_txt.xml",
-		"/C/chili_source/branches/v4-Bugfixes07-E/flash_components/.gitignore",
-		"/C/chili_data/Environments/Admin/perf.xml_er.txt",
-		"/C/chili_data/temp_service/58c4ecbc-4870-400b-a61d-5416233e005e/a1df7b17-1aa1-4291-9fad-38b9b08dfb3d/0e2642b6-ec52-4c80-8171-52f843e936df.xml",
-		"/C/Users/emilesonneveld/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/emilesonneveld/AppData/Roaming/Sublime Text 3/Packages/bz2/dependency-metadata.json"
+		"/C/chili_source/branches/v4-Bugfixes07-E/flash_components/.gitignore"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -532,7 +563,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -541,15 +572,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 345,
+						"buffer_size": 347,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								248,
-								248
+								347,
+								347
 							]
 						],
 						"settings":
@@ -560,7 +591,96 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "plugin/manifest.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "plugin/popup.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								643,
+								643
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/emilesonneveld/Google Drive/KissYourTeacher2/notitionEmile.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -618,6 +738,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"popjs",
+				"plugin\\popup.js"
+			],
+			[
+				"o",
+				"plugin\\popup.html"
+			],
 			[
 				"setti",
 				"mass_collide_project\\rc\\settings.ini"
@@ -882,7 +1010,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 322.0,
 	"status_bar_visible": true,
 	"template_settings":

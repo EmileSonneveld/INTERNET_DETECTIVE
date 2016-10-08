@@ -2,13 +2,80 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+var chalangesData = [
+  {
+    question:"comment réouvrir un onglet férmer précédement ?",
+    hint:"recherche sur internet",
+    answerGood:"Dans l'historique, ou faire Ctl-Shift-T.",
+    answerBad:[
+      "Loool",
+      "Heee"]
+  },
+  {
+    question:"ctrl+c et ctrl+v sert a quoi ?",
+    hint:"copie",
+    answerGood:"Se sont des chortcut pour copier et coller.",
+    answerBad:[
+      "Loool",
+      "Heee"]
+  }
+]
+var currentChallenge = chalangesData[0];
+
+function updateDropdownStatus(evt)
+{
+  console.log(evt.srcElement.value);
+  var myNode = document.getElementById("id_unordered_autocomplete_list");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+
+  var inputValue = id_textinput.value;
+  var responsesArray = [];
+  var arrayLength = chalangesData.length;
+  for (var i = 0; i < arrayLength; i++) {
+    var chalangeObj = chalangesData[i];
+    if(chalangeObj.answerGood.toLowerCase().includes(inputValue.toLowerCase()))
+      responsesArray.push(chalangeObj.answerGood);
+
+    for (var j = 0; j < chalangeObj.answerBad.length; j++) {
+      if(chalangeObj.answerBad[j].toLowerCase().includes(inputValue.toLowerCase()))
+        responsesArray.push(chalangeObj.answerBad[j]);
+    }
+  }
+
+  var responsesFilteredArray = responsesArray.filter(function(item, pos) {
+    return responsesArray.indexOf(item) == pos;
+  })
+
+  var responsesFilteredArrayLength = responsesArray.length;
+  for (var i = 0; i < responsesFilteredArrayLength; i++) {
+    var str = responsesFilteredArray[i];
+
+    var child = document.createElement("li");
+    var ref = document.createElement("a");
+    ref.href="#"
+    ref.innerHTML = str;
+    child.appendChild(ref);
+    ref.addEventListener("click", supselectionClicked)
+    myNode.appendChild(child);
+  }
+}
+
+function supselectionClicked(evt)
+{
+  console.log(evt.srcElement);
+  id_textinput.value = evt.srcElement.innerHTML;
+  evt.preventDefault();
+}
+
 /**
  * Get the current URL.
  *
  * @param {function(string)} callback - called when the URL of the current tab
  *   is found.
  */
-function getCurrentTabUrl(callback) {
+ function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
   var queryInfo = {
@@ -54,11 +121,11 @@ function getCurrentTabUrl(callback) {
  * @param {function(string)} errorCallback - Called when the image is not found.
  *   The callback gets a string that describes the failure reason.
  */
-function getImageUrl(searchTerm, callback, errorCallback) {
+ function getImageUrl(searchTerm, callback, errorCallback) {
   // Google image search - 100 searches per day.
   // https://developers.google.com/image-search/
   var searchUrl = 'https://ajax.googleapis.com/ajax/services/search/images' +
-    '?v=1.0&q=' + encodeURIComponent(searchTerm);
+  '?v=1.0&q=' + encodeURIComponent(searchTerm);
   var x = new XMLHttpRequest();
   x.open('GET', searchUrl);
   // The Google image search API responds with JSON, so let Chrome parse it.
@@ -67,19 +134,19 @@ function getImageUrl(searchTerm, callback, errorCallback) {
     // Parse and process the response from Google Image Search.
     var response = x.response;
     if (!response || !response.responseData || !response.responseData.results ||
-        response.responseData.results.length === 0) {
+      response.responseData.results.length === 0) {
       errorCallback('No response from Google Image search!');
-      return;
-    }
-    var firstResult = response.responseData.results[0];
+    return;
+  }
+  var firstResult = response.responseData.results[0];
     // Take the thumbnail instead of the full image to get an approximately
     // consistent image size.
     var imageUrl = firstResult.tbUrl;
     var width = parseInt(firstResult.tbWidth);
     var height = parseInt(firstResult.tbHeight);
     console.assert(
-        typeof imageUrl == 'string' && !isNaN(width) && !isNaN(height),
-        'Unexpected respose from the Google Image Search API!');
+      typeof imageUrl == 'string' && !isNaN(width) && !isNaN(height),
+      'Unexpected respose from the Google Image Search API!');
     callback(imageUrl, width, height);
   };
   x.onerror = function() {
@@ -93,6 +160,11 @@ function renderStatus(statusText) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  document.getElementById("id_textinput").addEventListener("change", updateDropdownStatus);
+  document.getElementById("id_textinput").addEventListener("keyup", updateDropdownStatus);
+
+  return;
   getCurrentTabUrl(function(url) {
     // Put the image URL in Google search.
     renderStatus('Performing Google Image search for ' + url);
@@ -100,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     getImageUrl(url, function(imageUrl, width, height) {
 
       renderStatus('Search term: ' + url + '\n' +
-          'Google image search result: ' + imageUrl);
+        'Google image search result: ' + imageUrl);
       var imageResult = document.getElementById('image-result');
       // Explicitly set the width/height to minimize the number of reflows. For
       // a single image, this does not matter, but if you're going to embed
