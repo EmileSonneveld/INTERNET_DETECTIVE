@@ -28,7 +28,7 @@ class MainHtml extends React.Component<MainHtmlProps, {}> {
 			<div className="row">
 				<div className="col-sm-12">
 					<div className="panel panel-default">
-						<div className="panel-body">{this.props.idModel.getCC().question}</div>
+						<div className="panel-body">{this.props.idModel.getCC().answerBad}</div>
 					</div>
 				</div>
 			</div>
@@ -46,7 +46,7 @@ class MainHtml extends React.Component<MainHtmlProps, {}> {
 					</div>
 					<form data-example-id="simple-input-groups">
 						<div className="input-group">
-							<input id="id_textinput" type="text" className="form-control" placeholder="Answer..." aria-describedby="basic-addon3" autocomplete="off" />
+							<input id="id_textinput" type="text" className="form-control" placeholder="Answer..." aria-describedby="basic-addon3" autoComplete={false} />
 							<span className="input-group-btn">
 								<button className="btn btn-default" type="button">Go!</button>
 							</span>
@@ -59,7 +59,7 @@ class MainHtml extends React.Component<MainHtmlProps, {}> {
 					<div className="modal-content">
 						<div className="modal-header">
 							<button type="button" className="close" data-dismiss="modal">×</button>
-							<h4 id="id_win_titel" className="modal-title">Good job!</h4>
+							<h4 id="id_win_titel" className="modal-title">this.props.idModel.getCC().</h4>
 						</div>
 						<div className="modal-body">
 							<p id="id_win_message">this.props.idModel.getCC().winmessage</p>

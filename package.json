@@ -11,12 +11,13 @@
     "browserify": "^6.2.0",
     "envify": "^3.0.0",
     "exorcist": "^0.4.0",
+    "tsify": "^0.15.5",
     "uglify-js": "~2.4.15",
     "watchify": "^3.7.0",
-    "tsify": "^0.15.5"
+    "webpack": "^1.13.2"
   },
   "scripts": {
-    "csv": "browserify src/upload_csv/internet_detective.ts -p [ tsify --jsx react] > www/js/internet_detective.js",
+    "IdApp": "browserify ./src/IdApp.tsx -p [ tsify --jsx react] > www/js/IdApp.js",
     "bb": "browserify src/app.tsx -p [ tsify --jsx react] > www/js/bundle.js",
     "test": "jest"
   }

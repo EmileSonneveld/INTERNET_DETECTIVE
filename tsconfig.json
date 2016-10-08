@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "./generated/",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react"
+    },
+    "files": [
+        "./src/IdApp.tsx"
+    ]
+}

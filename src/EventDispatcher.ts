@@ -1,5 +1,5 @@
 
-class EventDispatcher{
+class EventDispatcher {
 	private onChanges : Array<any>;
 
 	constructor(){
