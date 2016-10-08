@@ -66,7 +66,8 @@ function supselectionClicked(evt)
 {
   console.log(evt.srcElement);
   id_textinput.value = evt.srcElement.innerHTML;
-  evt.preventDefault();
+  $('#myModal').modal('show');
+  //evt.preventDefault();
 }
 
 /**
@@ -163,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById("id_textinput").addEventListener("change", updateDropdownStatus);
   document.getElementById("id_textinput").addEventListener("keyup", updateDropdownStatus);
-
+  $('.dropup > ul').css('top', '-' + $('.dropup > ul').css('height'));
   return;
   getCurrentTabUrl(function(url) {
     // Put the image URL in Google search.
