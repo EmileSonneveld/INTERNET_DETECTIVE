@@ -50,6 +50,7 @@ class IdApp extends React.Component<IAppProps, IAppState> {
 	public render() {
 		var footer;
 		var mainHtml;
+		console.log("render");
 
 		return (
 			<MainHtml idModel={this.props.model}>
@@ -66,6 +67,6 @@ function render() {
 		document.getElementsByClassName('IdApp')[0]
 		);
 }
-
+console.log("something");
 model.subscribe(render);
 render();

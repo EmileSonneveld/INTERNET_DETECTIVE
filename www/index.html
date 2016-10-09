@@ -20,18 +20,47 @@
     - Policy documentation[1] for details and explanation.
     -
     - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-  -->
-  <script src="js/require.js"></script>
-  <script src="../generated/IdApp.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/tscTest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  -->
+  <!-- data-main attribute tells require.js to load
+       scripts/main.js after require.js loads. -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
+  <script data-main="./gen/IdApp" src="./gen/require.js"></script>
 </head>
 
 <body>
   <div style="width:500px; height:100px;">
-    <section class="IdApp"></section>
+    <section class="IdAppOO"></section>
   </div>
+  <!--
+  <script data-main="js/tscTest" src="js/require.js"></script>
+  <script data-main="./gen/IdApp" src="js/require.js"></script>
+  -->
+
+  <script type="text/javascript">
+  //require("js/tscTest")
+  //System.import('tscTest');
+  //requirejs(["../generated/IdApp"],
+  //document.onload = function(argument)
+/*
+        function Loaded()
+        {
+            require.config()
+
+    require(["IdApp"], function() {
+      console.log();
+      //This function is called when scripts/helper/util.js is loaded.
+      //If util.js calls define(), then this function is not fired until
+      //util's dependencies have loaded, and the util argument will hold
+      //the module value for "helper/util".
+      });
+  }*/
+
+  </script>
 </body>
 
 </html>

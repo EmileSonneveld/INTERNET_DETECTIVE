@@ -1,10 +1,12 @@
 {
     "compilerOptions": {
-        "outDir": "./generated/",
-        "sourceMap": true,
+        "outDir": "./www/gen/",
+        "sourceMap": false,
         "noImplicitAny": false,
+        "moduleResolution": "node",
         "module": "commonjs",
         "target": "es5",
+        "outFile":"www/js/tscTest.js",
         "jsx": "react"
     },
     "files": [
