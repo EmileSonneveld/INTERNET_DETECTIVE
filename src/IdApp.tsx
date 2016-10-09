@@ -6,7 +6,6 @@
 
 /// <reference path="../typings/tsd.d.ts" />
 
-import { EventDispatcher } from "./EventDispatcher";
 import { IdModel } from "./IdModel";
 import { MainHtml } from "./MainHtml";
 
@@ -60,7 +59,7 @@ class IdApp extends React.Component<IAppProps, IAppState>
 	}
 }
 
-var globalModel:IdModel = new IdModel('react-todos');
+var globalModel:IdModel = new IdModel('IdModel-serialised');
 
 function render() {
 	React.render(

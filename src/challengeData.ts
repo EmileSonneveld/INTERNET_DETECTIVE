@@ -1,6 +1,6 @@
-import {Challenges, Challenge} from "./IdModel";
+import {Challenge} from "./IdModel";
 
-var challengeData = new Challenges();
+var challengeData:Array<Challenge>  = new Array<Challenge> ();
 var defaultChallenge:Challenge =
 {
   question:"'question' not filled in",

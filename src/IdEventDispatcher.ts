@@ -6,7 +6,7 @@
 
 /// <reference path="../typings/tsd.d.ts" />
 
-class EventDispatcher
+class IdEventDispatcher
 {
 
 	public constructor()
@@ -24,4 +24,4 @@ class EventDispatcher
 	}
 }
 
-export {EventDispatcher};
+export {IdEventDispatcher};

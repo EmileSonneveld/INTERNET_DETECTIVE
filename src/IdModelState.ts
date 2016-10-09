@@ -1,12 +1,12 @@
-import { EventDispatcher } from "./EventDispatcher";
+import { IdEventDispatcher } from "./IdEventDispatcher";
 
-class IdModelState extends EventDispatcher {
+class IdModelState extends IdEventDispatcher {
 
 	public constructor() {
 		super();
 	}
 
-	private _currentChalengeNumber:number = null;
+	private _currentChalengeNumber:number = 0;
 	public get currentChalengeNumber() : number {
 		return this._currentChalengeNumber;
 	}

@@ -3,11 +3,11 @@
 /*jshint trailing:false */
 /*jshint newcap:false */
 
-import { EventDispatcher } from "../EventDispatcher";
+import { IdEventDispatcher } from "../IdEventDispatcher";
 import { Challenge } from "../IdModel";
 
-class AutoChallange extends EventDispatcher {
-	
+class AutoChallange extends IdEventDispatcher {
+
 		private _question:string = null;
 		public get question() : string {
 		if(this._question!=null)
@@ -106,7 +106,7 @@ class AutoChallange extends EventDispatcher {
 	}
 
 
-	
+
 // You can cook extra code here
 public parent:AutoChallange = null;
 

@@ -20,9 +20,9 @@ class MainHtmlProps {
 }
 
 class MainHtml extends React.Component<MainHtmlProps, {}> {
-
 	public render() {
 
+		var test = this.props.idModel.getCC();
 		return (
 		<div className="container">
 

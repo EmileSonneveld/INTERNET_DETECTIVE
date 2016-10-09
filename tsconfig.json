@@ -3,7 +3,7 @@
         "outDir": "./www/gen/",
         "sourceMap": false,
         "noImplicitAny": false,
-        "module": "commonjs",
+        "module": "amd",
         "target": "es5",
         "jsx": "react"
     },
