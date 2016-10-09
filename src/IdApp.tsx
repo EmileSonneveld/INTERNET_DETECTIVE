@@ -6,6 +6,7 @@
 
 /// <reference path="../typings/tsd.d.ts" />
 
+import { EventDispatcher } from "./EventDispatcher";
 import { IdModel } from "./IdModel";
 import { MainHtml } from "./MainHtml";
 
@@ -18,15 +19,15 @@ interface IAppState {
 
 }
 
-class IdApp extends React.Component<IAppProps, IAppState> {
+class IdApp extends React.Component<IAppProps, IAppState>
+{
 
 	public state : IAppState;
 
-	constructor(props : IAppProps) {
+	public constructor(props : IAppProps) {
 		super(props);
 		this.state = {
-			nowShowing: 5,
-			editing: null
+
 		};
 	}
 
@@ -59,14 +60,14 @@ class IdApp extends React.Component<IAppProps, IAppState> {
 	}
 }
 
-var model:IdModel = new IdModel('react-todos');
+var globalModel:IdModel = new IdModel('react-todos');
 
 function render() {
 	React.render(
-		<IdApp model={model}/>,
+		<IdApp model={globalModel}/>,
 		document.getElementsByClassName('IdApp')[0]
 		);
 }
 console.log("something");
-model.subscribe(render);
+globalModel.subscribe(render);
 render();

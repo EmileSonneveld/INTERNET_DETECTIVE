@@ -1,17 +1,26 @@
+/*jshint quotmark:false */
+/*jshint white:false */
+/*jshint trailing:false */
+/*jshint newcap:false */
+/*global React, Router*/
 
-class EventDispatcher {
-	private onChanges : Array<any>;
+/// <reference path="../typings/tsd.d.ts" />
 
-	constructor(){
-		this.onChanges = [];
+class EventDispatcher
+{
+
+	public constructor()
+	{
 	}
 
-	public subscribe(onChange):void {
+	private onChanges : Array<(x:any)=>void> = [];
+
+	public subscribe(onChange:(x: any)=>void):void {
 		this.onChanges.push(onChange);
 	}
 	public notify()
 	{
-		this.onChanges.forEach(function (cb) { cb({target:this}); });
+		this.onChanges.forEach(function (cb:(x: any)=>void) { cb({target:this}); });
 	}
 }
 

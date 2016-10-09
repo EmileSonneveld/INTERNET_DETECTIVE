@@ -23,25 +23,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/tscTest.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  -->
+  <script data-main="./gen/IdApp" src="./js/require.js"></script>
+-->
   <!-- data-main attribute tells require.js to load
-       scripts/main.js after require.js loads. -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="https://jspm.io/system@0.16.js"></script>
+  scripts/main.js after require.js loads. -->
+  </head>
 
-  <script data-main="./gen/IdApp" src="./gen/require.js"></script>
-</head>
-
-<body>
-  <div style="width:500px; height:100px;">
-    <section class="IdAppOO"></section>
-  </div>
+  <body>
+    <div style="width:500px; height:100px;">
+      <section class="IdAppOO"></section>
+    </div>
   <!--
   <script data-main="js/tscTest" src="js/require.js"></script>
-  <script data-main="./gen/IdApp" src="js/require.js"></script>
-  -->
+-->
 
-  <script type="text/javascript">
+<script type="text/javascript">
   //require("js/tscTest")
   //System.import('tscTest');
   //requirejs(["../generated/IdApp"],
@@ -58,9 +55,16 @@
       //util's dependencies have loaded, and the util argument will hold
       //the module value for "helper/util".
       });
-  }*/
+    }*/
 
   </script>
-</body>
 
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script data-main="js/IdApp.min.js" src="js/require.js"></script>
+  <!--
+  <script type="text/javascript" src="js/IdApp.min.js"</script>
+  <script src="https://code.angularjs.org/tools/system.js"></script>
+  -->
+</body>
 </html>

@@ -8,11 +8,12 @@
 
 
 import { Utils } from "./utils";
-import { IdModel, IdModelState } from "./IdModel";
+import { IdModel } from "./IdModel";
+import { IdModelState } from "./IdModelState";
 
 class MainHtmlProps {
 
-	constructor() {
+	public constructor() {
 	}
 	public idModel:IdModel;
 

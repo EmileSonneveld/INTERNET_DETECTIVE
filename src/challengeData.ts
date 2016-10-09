@@ -1,4 +1,4 @@
-import {IdModel, Challenges, Challenge} from "./IdModel";
+import {Challenges, Challenge} from "./IdModel";
 
 var challengeData = new Challenges();
 var defaultChallenge:Challenge =

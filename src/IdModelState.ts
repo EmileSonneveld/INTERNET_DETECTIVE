@@ -2,7 +2,7 @@ import { EventDispatcher } from "./EventDispatcher";
 
 class IdModelState extends EventDispatcher {
 
-	constructor() {
+	public constructor() {
 		super();
 	}
 
