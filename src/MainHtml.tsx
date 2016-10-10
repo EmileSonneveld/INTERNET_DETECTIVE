@@ -10,17 +10,20 @@
 import { Utils } from "./utils";
 import { IdModel } from "./IdModel";
 import { IdModelState } from "./IdModelState";
+import { AutocompleteField } from "./AutocompleteField";
 
 class MainHtmlProps {
 
 	public constructor() {
 	}
 	public idModel:IdModel;
-
 }
 
 class MainHtml extends React.Component<MainHtmlProps, {}> {
+
+
 	public render() {
+
 
 		var test = this.props.idModel.getCC();
 		return (
@@ -41,20 +44,9 @@ class MainHtml extends React.Component<MainHtmlProps, {}> {
 			</div>
 
 			<div className="row">
-				<div className="col-sm-12">
-					<div className="dropup open">
-						<ul id="id_unordered_autocomplete_list" className="dropdown-menu" aria-labelledby="dropdownMenu1" />
-					</div>
-					<form data-example-id="simple-input-groups">
-						<div className="input-group">
-							<input id="id_textinput" type="text" className="form-control" placeholder="Answer..." aria-describedby="basic-addon3" autoComplete={false} />
-							<span className="input-group-btn">
-								<button className="btn btn-default" type="button">Go!</button>
-							</span>
-						</div>
-					</form>
-				</div>
+				<AutocompleteField idModel={this.props.idModel}/>
 			</div>
+
 			<div id="myModal" className="modal fade" role="dialog">
 				<div className="modal-dialog">
 					<div className="modal-content">

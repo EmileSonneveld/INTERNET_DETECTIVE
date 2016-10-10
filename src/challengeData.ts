@@ -38,7 +38,7 @@ challengeData[1] =
 challengeData[2] =
 {
   parent:defaultChallenge,
-  question:"question 2 (zero based counding)"
+  question:"question 2 (zero based counting)"
 };
 
 export {challengeData};

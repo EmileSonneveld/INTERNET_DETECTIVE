@@ -8,8 +8,22 @@ import { Challenge } from "../IdModel";
 
 class AutoChallange extends IdEventDispatcher {
 
-		private _question:string = null;
-		public get question() : string {
+	private _nouveau:string = null;
+	public get nouveau() : string {
+		if(this._nouveau!=null)
+			return this._nouveau;
+		if(this.parent!=null)
+			return this.parent.nouveau;
+		else
+			return "!problem here!";
+	}
+	public set nouveau(value:string) {
+		this._nouveau = value;
+	}
+
+
+	private _question:string = null;
+	public get question() : string {
 		if(this._question!=null)
 			return this._question;
 		if(this.parent!=null)
@@ -22,8 +36,8 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-		private _answerGood:string = null;
-		public get answerGood() : string {
+	private _answerGood:string = null;
+	public get answerGood() : string {
 		if(this._answerGood!=null)
 			return this._answerGood;
 		if(this.parent!=null)
@@ -36,8 +50,8 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-		private _responseCorrect:string = null;
-		public get responseCorrect() : string {
+	private _responseCorrect:string = null;
+	public get responseCorrect() : string {
 		if(this._responseCorrect!=null)
 			return this._responseCorrect;
 		if(this.parent!=null)
@@ -50,8 +64,8 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-		private _responseCorrectTitle:string = null;
-		public get responseCorrectTitle() : string {
+	private _responseCorrectTitle:string = null;
+	public get responseCorrectTitle() : string {
 		if(this._responseCorrectTitle!=null)
 			return this._responseCorrectTitle;
 		if(this.parent!=null)
@@ -64,8 +78,8 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-		private _responseWrong:string = null;
-		public get responseWrong() : string {
+	private _responseWrong:string = null;
+	public get responseWrong() : string {
 		if(this._responseWrong!=null)
 			return this._responseWrong;
 		if(this.parent!=null)
@@ -78,8 +92,8 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-		private _responseWrongTitle:string = null;
-		public get responseWrongTitle() : string {
+	private _responseWrongTitle:string = null;
+	public get responseWrongTitle() : string {
 		if(this._responseWrongTitle!=null)
 			return this._responseWrongTitle;
 		if(this.parent!=null)
@@ -92,8 +106,8 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-		private _hint:string = null;
-		public get hint() : string {
+	private _hint:string = null;
+	public get hint() : string {
 		if(this._hint!=null)
 			return this._hint;
 		if(this.parent!=null)

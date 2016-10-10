@@ -92,6 +92,23 @@ class IdModel extends IdEventDispatcher {
 	public getCC():Challenge {
 		return this.challenges[this.modelState.currentChalengeNumber];
 	}
+
+    private autoCompleteList:Array<string> = null;
+
+    public GetAutoCompleteList():Array<string> {
+        if(this.autoCompleteList==null){
+            this.autoCompleteList = [];
+            this.challenges.forEach(function(challangeIt) {
+                this.autoCompleteList.push(challangeIt.answerGood);
+                if(challangeIt.answerBad != null){
+                    challangeIt.answerBad.forEach(function(badIt) {
+                        this.autoCompleteList.push(badIt);
+                    });
+                }
+            });
+        }
+        return this.autoCompleteList;
+    }
 }
 
 
