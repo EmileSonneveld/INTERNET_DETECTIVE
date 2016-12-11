@@ -1,7 +1,10 @@
 import {Challenge} from "./IdModel";
 
-var challengeData:Array<Challenge>  = new Array<Challenge> ();
-var defaultChallenge:Challenge =
+//type Chal = Challenge;
+type Chal = Partial<Challenge>;
+
+var challengeData:Array<Chal>  = new Array<Chal> ();
+var defaultChallenge:Chal =
 {
   question:"'question' not filled in",
   hint:"'hint' not filled in",
@@ -11,8 +14,7 @@ var defaultChallenge:Challenge =
   responseWrong:"'responseWrong' not filled in"
 };
 
-challengeData[0] =
-{
+challengeData[0] = {
   parent:defaultChallenge,
   question:"comment réouvrir un onglet férmer précédement ?",
   hint:"recherche sur internet",

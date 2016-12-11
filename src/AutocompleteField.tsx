@@ -52,9 +52,9 @@ class AutocompleteField extends React.Component<AutocompleteFieldProps, Autocomp
 	public render() {
 		console.log("render");
 		var accumulatedAutocomplete:Array<string> = this.props.idModel.GetAutoCompleteList().filter(function(msg)
-			{
-    if(msg.toLowerCase().includes(this.state.inputText.toLowerCase()))
-return true;
+		{
+			if(msg.toLowerCase().indexOf(this.state.inputText.toLowerCase()) === -1)
+				return true;
 			});
 
 		var lis = accumulatedAutocomplete.map((response) => {

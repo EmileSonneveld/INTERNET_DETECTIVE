@@ -7,22 +7,8 @@ import { IdEventDispatcher } from "../IdEventDispatcher";
 import { Challenge } from "../IdModel";
 
 class AutoChallange extends IdEventDispatcher {
-
-	private _nouveau:string = null;
-	public get nouveau() : string {
-		if(this._nouveau!=null)
-			return this._nouveau;
-		if(this.parent!=null)
-			return this.parent.nouveau;
-		else
-			return "!problem here!";
-	}
-	public set nouveau(value:string) {
-		this._nouveau = value;
-	}
-
-
-	private _question:string = null;
+	
+	private _question?:string = null;
 	public get question() : string {
 		if(this._question!=null)
 			return this._question;
@@ -36,7 +22,7 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-	private _answerGood:string = null;
+	private _answerGood?:string = null;
 	public get answerGood() : string {
 		if(this._answerGood!=null)
 			return this._answerGood;
@@ -50,7 +36,7 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-	private _responseCorrect:string = null;
+	private _responseCorrect?:string = null;
 	public get responseCorrect() : string {
 		if(this._responseCorrect!=null)
 			return this._responseCorrect;
@@ -64,7 +50,7 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-	private _responseCorrectTitle:string = null;
+	private _responseCorrectTitle?:string = null;
 	public get responseCorrectTitle() : string {
 		if(this._responseCorrectTitle!=null)
 			return this._responseCorrectTitle;
@@ -78,7 +64,7 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-	private _responseWrong:string = null;
+	private _responseWrong?:string = null;
 	public get responseWrong() : string {
 		if(this._responseWrong!=null)
 			return this._responseWrong;
@@ -92,7 +78,7 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-	private _responseWrongTitle:string = null;
+	private _responseWrongTitle?:string = null;
 	public get responseWrongTitle() : string {
 		if(this._responseWrongTitle!=null)
 			return this._responseWrongTitle;
@@ -106,7 +92,7 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-	private _hint:string = null;
+	private _hint?:string = null;
 	public get hint() : string {
 		if(this._hint!=null)
 			return this._hint;
@@ -120,9 +106,9 @@ class AutoChallange extends IdEventDispatcher {
 	}
 
 
-
+	
 // You can cook extra code here
-public parent:AutoChallange = null;
+public parent:Partial<AutoChallange> = null;
 
 }
 

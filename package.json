@@ -6,7 +6,8 @@
     "google-closure-compiler": "^20160911.0.0",
     "react": "^0.13.3",
     "todomvc-app-css": "^2.0.0",
-    "todomvc-common": "^1.0.1"
+    "todomvc-common": "^1.0.1",
+    "typescript": "^2.1.4"
   },
   "devDependencies": {
     "browserify": "^6.2.0",

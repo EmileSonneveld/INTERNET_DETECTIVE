@@ -15,10 +15,16 @@ import { IdModelState } from "./IdModelState";
 
 class Challenge extends AutoChallange {
 
-	public constructor() {
+	/*public constructor() {
 		super();
-	}
+	}*/
 	public answerBad:Array<string> = [];
+
+    
+    public constructor(init?:Partial<Challenge>) {
+		super();
+        (<any>Object).assign(this, init);
+    }
 }
 
 /*
